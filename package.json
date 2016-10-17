@@ -1,0 +1,16 @@
+{
+  "name": "node-instagram",
+  "version": "1.0.0",
+  "description": "node and instagram app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "klufkin",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "instagram-node": "^0.5.8"
+  }
+}

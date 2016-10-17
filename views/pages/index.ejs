@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Title</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+        <div class="row">
+            <% for (gram of media) { %>
+                <div class="instagram-pic col-sm-3">
+                    <a href="<%= gram.link %>" target="_blank">
+                        <img src="<%= gram.images.standard_resolution.url %>" class="img-responsive">
+                    </a>
+                    <div class="instagram-bar">
+                        <div class="likes">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <%= gram.likes.count %>
+                        </div>
+                        <div class="comments">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <%= gram.comments.count %>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+
+</html>
